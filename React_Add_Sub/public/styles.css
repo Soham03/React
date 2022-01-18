@@ -1,0 +1,54 @@
+body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  background-color: #374954;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  
+}
+
+
+
+
+.num1
+{
+  margin-top: 20%;
+  margin-bottom:5%;
+  padding:20px;
+  font-size: 20px;
+  align-items:center;
+  background-color: #374954;
+  text-align: center;
+  margin-left:37%;
+}
+.onclick1
+{
+display: inline-block;
+margin-left: 30%;
+font-size: 50px;
+color: #fff;
+text-align: center;
+background-color: #6bbe92;
+font-weight: bold;
+border: 0;
+width: 160px;
+
+}
+
+.onclick2
+{
+  display: inline-block;
+  margin-left:5%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #6bbe92;
+  font-weight: bold;
+  border: 0;
+  width: 160px;
+
+
+}
