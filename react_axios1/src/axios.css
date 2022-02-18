@@ -1,0 +1,19 @@
+.text{
+margin-left: 40%;
+margin-top:5%;
+margin-bottom:5% ;
+padding:2%;
+border-color: blue;
+}
+
+.button{
+    margin-left:2% ;
+    padding:2%
+}
+
+.name{
+    border: solid black 1px;
+    text-align:center;
+     padding:20px;
+
+}
