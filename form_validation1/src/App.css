@@ -1,0 +1,23 @@
+#form{
+  text-align: center;
+  border-style:solid;
+  border-width: 2px;
+  border-radius: 20px;
+  margin-left: 500px;
+  margin-right:500px;
+  margin-top:50px;
+}
+#comment{
+  border: 1px solid rgba(16, 46, 46, 1);
+  background-color: rgba(217, 228, 228, 0.973);
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 10px;
+  
+
+}
+
+#rating{
+  size:10px;
+}
