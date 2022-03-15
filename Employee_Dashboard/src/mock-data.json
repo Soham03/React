@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "firstName": "Rahul",
+      "lastName": "Sawant",
+      "phoneNumber": "7977655158",
+      "email": "rahulsawant@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Bhavyen ",
+      "lastName": "Naik",
+      "phoneNumber": "7977530697",
+      "email": "bhavyen.naik@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Saurabh ",
+      "lastName": "Mystery",
+      "phoneNumber": "9768934305",
+      "email": "saurabh.mystery@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Ashish ",
+      "lastName": "Howal",
+      "phoneNumber": "8369262080",
+      "email": "ashish.howal@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Mihir ",
+      "lastName": "Rane",
+      "phoneNumber": "7718088367",
+      "email": "mihir.rane@gmail.com"
+    }
+  ]
