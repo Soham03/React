@@ -11,13 +11,14 @@ const Favourites = () => {
     
     
     
-    let api=`https://rickandmortyapi.com/api/character/${newArray}`
+    
     
     useEffect(()=>{
         (async function(){
-          let data1= await fetch(`https://rickandmortyapi.com/api/character/${localStorage.liked}`).then((response)=>{return response.json()});
+          if(localStorage.liked !=null)
+         { let data1= await fetch(`https://rickandmortyapi.com/api/character/${localStorage.liked}`).then((response)=>{return response.json()});
        updateFavData(data1)
-          
+        }
         })()
       },[])
 

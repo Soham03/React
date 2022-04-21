@@ -18,6 +18,7 @@ function Cards({results}) {
      }
      let old_data=JSON.parse(localStorage.getItem('liked'));
      old_data.push(data.id)
+    
 
      localStorage.setItem('liked',JSON.stringify(old_data))
     }
