@@ -1,0 +1,13 @@
+
+.darkmode{
+background-color: black;
+color:white;
+height: 100% !important;
+
+}
+
+.lightmode{
+background-color:white;
+color:black;
+height:100% !important;
+}
