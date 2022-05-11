@@ -1,27 +1,16 @@
 import React,{useState} from 'react'
 import styles from './Cards.module.css'
 
-function Cards({results}) {
+function Cards({results,setLikedData2}) {
     
     let display;
     const [likedData,setLiked]=useState([])
 
     
-    function handleClick(data)
-    {
-    
-    
-   
-        if(localStorage.getItem('liked')===null)
-     {
-         localStorage.setItem('liked',JSON.stringify(likedData))
-     }
-     let old_data=JSON.parse(localStorage.getItem('liked'));
-     old_data.push(data.id)
-    
-
-     localStorage.setItem('liked',JSON.stringify(old_data))
-    }
+    function handleClick(data){
+        likedData.push(data);
+          setLikedData2(likedData);
+       }
     
     
     if(results)

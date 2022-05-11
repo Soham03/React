@@ -1,3 +1,4 @@
+import React,{useState} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap";
 import './App.css';
@@ -9,6 +10,9 @@ import Home from './Pages/Home';
 
 
 function App(){
+  const [likedData, setLikedData] = useState([])
+
+  
 return(
 
   <Router>
@@ -16,8 +20,8 @@ return(
     <Navbar/>
     </div>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/favourites" element={<Favourites/>}/>
+      <Route path="/" element={<Home setLikedData={setLikedData}/>}/>
+      <Route path="/favourites" element={<Favourites liked={likedData} setLiked={setLikedData}/>}/>
     </Routes>
   </Router>
 )

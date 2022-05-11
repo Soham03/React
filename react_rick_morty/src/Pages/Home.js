@@ -5,11 +5,16 @@ import Search from '../Components/Search/Search';
 
 
 
-const Home=()=> {
+const Home=({setLikedData})=> {
     let [pageNumber,setPageNumber]=useState(1);
     let [fetchedData,updateFetchedData]=useState([]);
     let [search,setSearch]=useState("")
     let {results}=fetchedData;
+    let [likedData2,setLikedData2]=useState([]);
+    
+
+    setLikedData(likedData2);
+    
    
     let api=`https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
     
@@ -36,7 +41,7 @@ const Home=()=> {
           
           <div className="col-12 " style={{marginLeft:"12%",marginRight:"15%"}}   >
             <div className="row gap-5">
-              <Cards  results={results}/>
+              <Cards  results={results} setLikedData2={setLikedData2}/>
             </div>
           </div>
         </div>

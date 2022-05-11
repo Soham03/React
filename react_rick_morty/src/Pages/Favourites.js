@@ -1,68 +1,35 @@
-import React,{useState,useEffect} from 'react'
-import styles from '../Components/Cards/Cards.module.css'
+import React,{useState} from 'react'
 
 
-const Favourites = () => {
+const Favourites = ({liked,setLiked}) => {
 
-    const [array,setArray]=useState([]);
-    let newArray;
-    newArray=array.toString();
-    const [favdata,updateFavData]=useState();
-    
-    
-    
-    
-    
-    useEffect(()=>{
-        (async function(){
-          if(localStorage.liked !=null)
-         { let data1= await fetch(`https://rickandmortyapi.com/api/character/${localStorage.liked}`).then((response)=>{return response.json()});
-       updateFavData(data1)
-        }
-        })()
-      },[])
 
-      const renderDisplay = () =>{
-if(favdata)
-          {
-            return favdata.map(x=>{
-  
-return(<div className="col-12 " style={{marginLeft:"12%",marginRight:"15%"}}   >
-        <div className="row gap-4">
-        <div className={styles.flipcard} key={x.id}>
-                     <div className={styles.flipcardinner} >
-                        <div className={styles.flipcardfront}>
-                                <img src={x.image} className={`${styles.img}`} alt=""/>
-                                </div>
-                                <div className={styles.flipcardback}>
-                                <div className={styles.content}> 
-                                  <div className="fs-3 fw-bold mb-1" style={{color:"black"}}>{x.name}</div>
-                    
-                                  <div className="fs-6">Gender</div>
-                                  <div className="fs-6 fw-bold">{x.gender}</div>
-                                  <div className="fs-6">Species</div>
-                                  <div className="fs-6 fw-bold">{x.species}</div>
-                                  <div className="fs-6">Status</div>
-                                  <div className="fs-6 fw-bold">{x.status}</div> 
-                                 </div> 
-                              </div>
-                        </div>
-                </div>
-</div>
-</div>
-             ) })
-          }  
-          else{
-           return (
-             <h1>No Data Found</h1>
-           )
-          }
-     
-      }      
-    return (
-            <>{renderDisplay()}</>
-    )
+    function handleClick(data)
+    {
+        setLiked(liked.filter(x=>x!==data))
     }
+    return (
+        <div className="container">
+        <div className="row">
+            <div className="col-9 offset-md-2">
+                <div className="row gap-4">
+            {liked.map((item)=>{return(
+        
+        <div className="card" style={{width:"18rem"}}>
+            <img class="card-img-top" src={item.image} alt="Card image cap"/>
+           <div className="card-body">
+<p className="card-text">{item.name}</p>
+<button onClick={()=>{handleClick(item)}}>Unlike</button>
+</div>
 
-export default Favourites;
-   
+        </div>    
+        )
+        })}
+        </div>
+            </div>
+        </div>
+        </div>
+    )
+}
+
+export default Favourites
